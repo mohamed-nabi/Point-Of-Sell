@@ -1,0 +1,9 @@
+C:\Users\ENIGMA\Desktop\programming\New POS\NewPOS_DL\bin\Debug\NewPOS_DL.dll
+C:\Users\ENIGMA\Desktop\programming\New POS\NewPOS_DL\bin\Debug\NewPOS_DL.pdb
+C:\Users\ENIGMA\Desktop\programming\New POS\NewPOS_DL\bin\Debug\NewPOS_Models.dll
+C:\Users\ENIGMA\Desktop\programming\New POS\NewPOS_DL\bin\Debug\NewPOS_Models.pdb
+C:\Users\ENIGMA\Desktop\programming\New POS\NewPOS_DL\obj\Debug\NewPOS_DL.csproj.AssemblyReference.cache
+C:\Users\ENIGMA\Desktop\programming\New POS\NewPOS_DL\obj\Debug\NewPOS_DL.csproj.CoreCompileInputs.cache
+C:\Users\ENIGMA\Desktop\programming\New POS\NewPOS_DL\obj\Debug\NewPOS_DL.csproj.Up2Date
+C:\Users\ENIGMA\Desktop\programming\New POS\NewPOS_DL\obj\Debug\NewPOS_DL.dll
+C:\Users\ENIGMA\Desktop\programming\New POS\NewPOS_DL\obj\Debug\NewPOS_DL.pdb

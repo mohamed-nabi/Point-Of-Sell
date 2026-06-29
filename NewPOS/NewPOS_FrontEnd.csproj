@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33A7A421-BED4-4C0C-BF79-77D694AF6D92}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NewPOS</RootNamespace>
+    <AssemblyName>NewPOS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmAddEditInventoryUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmAddEditInventoryUnit.Designer.cs">
+      <DependentUpon>frmAddEditInventoryUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmInventory.Designer.cs">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\frmAddUpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\frmAddUpdateProduct.Designer.cs">
+      <DependentUpon>frmAddUpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\frmFindProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\frmFindProduct.Designer.cs">
+      <DependentUpon>frmFindProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sell\frmEditQty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sell\frmEditQty.Designer.cs">
+      <DependentUpon>frmEditQty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sell\frmSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sell\frmSell.Designer.cs">
+      <DependentUpon>frmSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controlls\ucFindProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controlls\ucFindProduct.Designer.cs">
+      <DependentUpon>ucFindProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controlls\ucListFindProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controlls\ucListFindProduct.Designer.cs">
+      <DependentUpon>ucListFindProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controlls\ucShowProductInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controlls\ucShowProductInfo.Designer.cs">
+      <DependentUpon>ucShowProductInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmAddEditInventoryUnit.resx">
+      <DependentUpon>frmAddEditInventoryUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmInventory.resx">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\frmAddUpdateProduct.resx">
+      <DependentUpon>frmAddUpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\frmFindProduct.resx">
+      <DependentUpon>frmFindProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sell\frmEditQty.resx">
+      <DependentUpon>frmEditQty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sell\frmSell.resx">
+      <DependentUpon>frmSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controlls\ucFindProduct.resx">
+      <DependentUpon>ucFindProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controlls\ucListFindProduct.resx">
+      <DependentUpon>ucListFindProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controlls\ucShowProductInfo.resx">
+      <DependentUpon>ucShowProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NewPOSBL\NewPOS_BL.csproj">
+      <Project>{aec23fbb-35ae-4d53-91fd-9fa790db4f7d}</Project>
+      <Name>NewPOS_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewPOS_Models\NewPOS_Models.csproj">
+      <Project>{0789c901-736d-45e6-91a0-6122fb5eb8c7}</Project>
+      <Name>NewPOS_Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Migration.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\POS_LOGO.png" />
+    <None Include="Resources\drinks_15269649.png" />
+    <None Include="Resources\drinks_15269649 %281%29.png" />
+    <None Include="Resources\drinks_15269649 %282%29.png" />
+    <None Include="Resources\inventory-management_16962962.png" />
+    <None Include="Resources\selling_4106400.png" />
+    <None Include="Resources\sell_7511684.png" />
+    <None Include="Resources\shopping-basket_4710326.png" />
+    <None Include="Resources\list_4522673.png" />
+    <None Include="Resources\delete_14024991.png" />
+    <None Include="Resources\add-button_8371340.png" />
+    <None Include="Resources\pen_16474192.png" />
+    <None Include="Resources\delete_140249911.png" />
+    <None Include="Resources\delete_16242588.png" />
+    <None Include="Resources\add-button_83713401.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\EditProduct.png" />
+    <None Include="Resources\AddProduct.png" />
+    <None Include="Resources\EditProduct1.png" />
+    <None Include="Resources\AddProduct1.png" />
+    <None Include="Resources\InventoryList.png" />
+    <None Include="Resources\SearchBar.png" />
+    <None Include="Resources\SearchBar 16.png" />
+    <None Include="Resources\good-review_16869017.png" />
+    <None Include="Resources\Edit Qty 24.png" />
+    <None Include="Resources\Edit Qty 32.png" />
+    <None Include="Resources\clear 24.png" />
+    <None Include="Resources\Save 24.png" />
+    <None Include="Resources\Delete Row.png" />
+    <Content Include="Seeder.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
