@@ -10,7 +10,7 @@ using System.Configuration;
 
 namespace NewPOS
 {
-
+    
     internal static class Program
     {
 
