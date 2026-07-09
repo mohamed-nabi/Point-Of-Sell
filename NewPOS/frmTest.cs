@@ -1,4 +1,5 @@
-﻿using NewPOS_Models;
+﻿using NewPOS.Invoices;
+using NewPOS_Models;
 using NewPOSBL;
 using System;
 using System.Collections.Generic;
@@ -23,12 +24,10 @@ namespace NewPOS
 
         private void frmTest_Load(object sender, EventArgs e)
         {
-            
+            frmInvoiceItemsList frm = new frmInvoiceItemsList(46);
+            frm.ShowDialog();
         }
 
-        private void ucListFindProduct1_ProductSelected(object sender, int e)
-        {
-            MessageBox.Show(e.ToString());
-        }
+
     }
 }

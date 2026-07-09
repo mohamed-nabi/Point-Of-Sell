@@ -91,12 +91,14 @@ namespace NewPOSBL
         public clsProduct GetPeroductByProductID(int ProductID)
         {
             clsProduct product = new clsProduct();
-            string ProductName = "";
+            string ProductName = "" , Barcode = "";
 
-            if(_ProductDL.GetPeroductByProductID(ProductID ,ref ProductName))
+            if(_ProductDL.GetPeroductByProductID(ProductID ,ref ProductName 
+                ,ref Barcode))
             {
                 product.ProductID = ProductID;
                 product.ProductName = ProductName;
+                product.Barcode = Barcode;
                 product.Mode = clsProduct.enMode.Edit;
 
                 return product;

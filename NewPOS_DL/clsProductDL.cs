@@ -27,6 +27,8 @@ namespace NewPOS_DL
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@ProductName", Product.ProductName);
+                    command.Parameters.AddWithValue("@Barcode", Product.ProductName);
+
 
                     SqlParameter outputIdParam = new SqlParameter("@ProductID", SqlDbType.Int)
                     {
@@ -65,6 +67,7 @@ namespace NewPOS_DL
 
                     command.Parameters.AddWithValue("@ProductName", Product.ProductName);
                     command.Parameters.AddWithValue("@ProductID", Product.ProductID);
+                    command.Parameters.AddWithValue("@Barcode", Product.Barcode);
 
 
                     SqlParameter outputIdParam = new SqlParameter("@IsSuccess", SqlDbType.Int)
@@ -150,7 +153,8 @@ namespace NewPOS_DL
             return isExists;
         }
 
-        public bool GetPeroductByProductID(int ProductID ,ref string ProductName)
+        public bool GetPeroductByProductID(int ProductID ,
+            ref string ProductName ,ref string Barcode)
         {
             if (ProductID < 0)
             {
@@ -174,11 +178,20 @@ namespace NewPOS_DL
 
                     command.Parameters.Add(outputIdParam);
 
+                    SqlParameter outBarcodepram = new SqlParameter("@Barcode", SqlDbType.VarChar, 20)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+
+                    command.Parameters.Add(outBarcodepram);
+
                     connection.Open();
 
                     command.ExecuteNonQuery();
 
                     ProductName = command.Parameters["@ProductName"].Value.ToString();
+                    ProductName = command.Parameters["@Barcode"].Value.ToString();
+
                 }
             }
 

@@ -253,6 +253,36 @@ namespace NewPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap invoice_3366266 {
+            get {
+                object obj = ResourceManager.GetObject("invoice_3366266", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap invoice_3366266__1_ {
+            get {
+                object obj = ResourceManager.GetObject("invoice_3366266 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap invoice_3366266__2_ {
+            get {
+                object obj = ResourceManager.GetObject("invoice_3366266 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap list_4522673 {
             get {
                 object obj = ResourceManager.GetObject("list_4522673", resourceCulture);
@@ -276,6 +306,26 @@ namespace NewPOS.Properties {
         internal static System.Drawing.Bitmap POS_LOGO {
             get {
                 object obj = ResourceManager.GetObject("POS_LOGO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap printer_684906 {
+            get {
+                object obj = ResourceManager.GetObject("printer_684906", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap printer_684906__1_ {
+            get {
+                object obj = ResourceManager.GetObject("printer_684906 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

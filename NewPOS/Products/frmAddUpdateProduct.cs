@@ -40,6 +40,7 @@ namespace NewPOS.Products
             this.ValidateChildren();
 
             _Product.ProductName = txtName.Text;
+            _Product.Barcode = txtBarcode.Text; 
 
             if(_Product.Mode == clsProduct.enMode.Add)
             {
@@ -104,6 +105,7 @@ namespace NewPOS.Products
 
                 _Product = _ProductBL.GetPeroductByProductID(_ProductID);
                 txtName.Text = _Product.ProductName;
+                txtBarcode.Text = _Product.Barcode;
             }
 
             _UpdateContantByFormStatus();
@@ -135,6 +137,20 @@ namespace NewPOS.Products
 
                 this.Name = "Add Product";
             }
+        }
+
+        private void txtBarcode_TabIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBarcode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!(char.IsLetterOrDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+                
         }
     }
 }

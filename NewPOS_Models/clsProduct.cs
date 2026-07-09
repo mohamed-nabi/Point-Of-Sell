@@ -14,17 +14,20 @@ namespace NewPOS_Models
 
         public int ProductID { get; set; }
         public string ProductName { get; set; }
+        public  string Barcode { get; set; }    
 
         public clsProduct()
         {
             ProductID = -1;
             ProductName = "";
+            Barcode = "";
         }
 
-        public clsProduct(int productID ,string productName)
+        public clsProduct(int productID ,string productName ,string barcode)
         {
             ProductName = productName;
             ProductID = productID;      
+            Barcode = barcode;
         }
     }
 }

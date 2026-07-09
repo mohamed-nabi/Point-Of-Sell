@@ -41,7 +41,7 @@ namespace NewPOS
             }
 
 
-        //    Application.Run(new frmTest());
+        //   Application.Run(new frmTest());
             Application.Run(new frmMain());
         }
 

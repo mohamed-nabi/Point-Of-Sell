@@ -70,6 +70,18 @@
     <Compile Include="Inventory\frmInventory.Designer.cs">
       <DependentUpon>frmInventory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoices\frmInvoiceItemsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\frmInvoiceItemsList.Designer.cs">
+      <DependentUpon>frmInvoiceItemsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\frmInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\frmInvoices.Designer.cs">
+      <DependentUpon>frmInvoices.cs</DependentUpon>
+    </Compile>
     <Compile Include="Products\frmAddUpdateProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\frmInventory.resx">
       <DependentUpon>frmInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\frmInvoiceItemsList.resx">
+      <DependentUpon>frmInvoiceItemsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\frmInvoices.resx">
+      <DependentUpon>frmInvoices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Products\frmAddUpdateProduct.resx">
       <DependentUpon>frmAddUpdateProduct.cs</DependentUpon>
@@ -223,6 +241,11 @@
     <None Include="Resources\clear 24.png" />
     <None Include="Resources\Save 24.png" />
     <None Include="Resources\Delete Row.png" />
+    <None Include="Resources\printer_684906 %281%29.png" />
+    <None Include="Resources\printer_684906.png" />
+    <None Include="Resources\invoice_3366266.png" />
+    <None Include="Resources\invoice_3366266 %282%29.png" />
+    <None Include="Resources\invoice_3366266 %281%29.png" />
     <Content Include="Seeder.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

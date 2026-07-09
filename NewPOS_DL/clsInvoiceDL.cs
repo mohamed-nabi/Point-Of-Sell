@@ -166,5 +166,46 @@ namespace NewPOS_DL
             return Invoice.InvoiceID > 0;
         }
 
+        public DataTable GetAllInvoices()
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.
+                ConnectionStrings["MyDbConnection"].ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("SP_GetAllInvoices", connection))
+                {
+
+
+                    connection.Open();
+
+                    dt.Load(command.ExecuteReader());
+                }
+            }
+
+            return dt;
+        }
+
+        public DataTable GetInvoiceitemsByInvoiceID(int InvoiceID)
+        {
+            DataTable dt = new DataTable(); 
+
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.
+                ConnectionStrings["MyDbConnection"].ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("SP_GetInvoiceitemsByInvoiceID", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@InvoiceID" , InvoiceID);
+
+                    connection.Open();
+
+                    dt.Load(command.ExecuteReader());
+                }
+            }
+
+            return dt;
+        }
     }
 }

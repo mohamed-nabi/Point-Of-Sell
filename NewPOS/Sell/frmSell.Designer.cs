@@ -30,20 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.spMian = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
             this.gbInvoice = new System.Windows.Forms.GroupBox();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDeleteRow = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.dgvBasket = new System.Windows.Forms.DataGridView();
             this.cmsBasket = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ucListFindProduct1 = new NewPOS.User_Controlls.ucListFindProduct();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDeleteRow = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.tsmEditQty = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUpdateProduct = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
-            this.ucListFindProduct1 = new NewPOS.User_Controlls.ucListFindProduct();
             ((System.ComponentModel.ISupportInitialize)(this.spMian)).BeginInit();
             this.spMian.Panel1.SuspendLayout();
             this.spMian.Panel2.SuspendLayout();
@@ -61,7 +61,7 @@
             // 
             // spMian.Panel1
             // 
-            this.spMian.Panel1.Controls.Add(this.button1);
+            this.spMian.Panel1.Controls.Add(this.btnPrint);
             this.spMian.Panel1.Controls.Add(this.gbInvoice);
             this.spMian.Panel1.Controls.Add(this.btnSave);
             this.spMian.Panel1.Controls.Add(this.label1);
@@ -78,20 +78,6 @@
             this.spMian.Size = new System.Drawing.Size(800, 450);
             this.spMian.SplitterDistance = 401;
             this.spMian.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(294, 409);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 29);
-            this.button1.TabIndex = 13;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // gbInvoice
             // 
@@ -125,6 +111,62 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Total Price :";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Lime;
+            this.label1.Location = new System.Drawing.Point(158, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 29);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Basket";
+            // 
+            // dgvBasket
+            // 
+            this.dgvBasket.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvBasket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBasket.ContextMenuStrip = this.cmsBasket;
+            this.dgvBasket.EnableHeadersVisualStyles = false;
+            this.dgvBasket.Location = new System.Drawing.Point(3, 50);
+            this.dgvBasket.Name = "dgvBasket";
+            this.dgvBasket.ReadOnly = true;
+            this.dgvBasket.Size = new System.Drawing.Size(395, 232);
+            this.dgvBasket.TabIndex = 5;
+            this.dgvBasket.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvBasket_RowsAdded);
+            // 
+            // cmsBasket
+            // 
+            this.cmsBasket.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmEditQty});
+            this.cmsBasket.Name = "cmsBasket";
+            this.cmsBasket.Size = new System.Drawing.Size(168, 34);
+            // 
+            // ucListFindProduct1
+            // 
+            this.ucListFindProduct1.Location = new System.Drawing.Point(6, 209);
+            this.ucListFindProduct1.Name = "ucListFindProduct1";
+            this.ucListFindProduct1.Size = new System.Drawing.Size(378, 229);
+            this.ucListFindProduct1.TabIndex = 16;
+            this.ucListFindProduct1.ProductSelected += new System.EventHandler<NewPOS.User_Controlls.ucListFindProduct.ProductSelectedEventArgs>(this.ucListFindProduct1_ProductSelected);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.White;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.Black;
+            this.btnPrint.Image = global::NewPOS.Properties.Resources.printer_684906;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrint.Location = new System.Drawing.Point(294, 409);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(89, 29);
+            this.btnPrint.TabIndex = 13;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnSave
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -140,17 +182,6 @@
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(158, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 29);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Basket";
             // 
             // btnDeleteRow
             // 
@@ -184,26 +215,6 @@
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // dgvBasket
-            // 
-            this.dgvBasket.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvBasket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBasket.ContextMenuStrip = this.cmsBasket;
-            this.dgvBasket.EnableHeadersVisualStyles = false;
-            this.dgvBasket.Location = new System.Drawing.Point(3, 50);
-            this.dgvBasket.Name = "dgvBasket";
-            this.dgvBasket.ReadOnly = true;
-            this.dgvBasket.Size = new System.Drawing.Size(395, 232);
-            this.dgvBasket.TabIndex = 5;
-            this.dgvBasket.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvBasket_RowsAdded);
-            // 
-            // cmsBasket
-            // 
-            this.cmsBasket.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmEditQty});
-            this.cmsBasket.Name = "cmsBasket";
-            this.cmsBasket.Size = new System.Drawing.Size(168, 34);
             // 
             // tsmEditQty
             // 
@@ -247,14 +258,6 @@
             this.btnAddProduct.UseVisualStyleBackColor = true;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
-            // ucListFindProduct1
-            // 
-            this.ucListFindProduct1.Location = new System.Drawing.Point(6, 209);
-            this.ucListFindProduct1.Name = "ucListFindProduct1";
-            this.ucListFindProduct1.Size = new System.Drawing.Size(378, 229);
-            this.ucListFindProduct1.TabIndex = 16;
-            this.ucListFindProduct1.ProductSelected += new System.EventHandler<NewPOS.User_Controlls.ucListFindProduct.ProductSelectedEventArgs>(this.ucListFindProduct1_ProductSelected);
-            // 
             // frmSell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +296,6 @@
         private System.Windows.Forms.GroupBox gbInvoice;
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

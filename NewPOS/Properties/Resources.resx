@@ -121,9 +121,6 @@
   <data name="delete_14024991" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_14024991.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shopping-basket_4710326" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shopping-basket_4710326.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Edit Qty 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Edit Qty 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -132,6 +129,9 @@
   </data>
   <data name="sell_7511684" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sell_7511684.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="printer_684906" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer_684906.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="inventory-management_16962962" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inventory-management_16962962.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,6 +172,9 @@
   <data name="selling_4106400" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\selling_4106400.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="shopping-basket_4710326" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shopping-basket_4710326.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="drinks_15269649 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\drinks_15269649 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,8 +190,14 @@
   <data name="SearchBar 16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SearchBar 16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Delete Row" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delete Row.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AddProduct" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddProduct1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="printer_684906 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer_684906 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clear 24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clear 24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,7 +208,13 @@
   <data name="Save 24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save 24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Delete Row" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Delete Row.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="invoice_3366266" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\invoice_3366266.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="invoice_3366266 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\invoice_3366266 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="invoice_3366266 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\invoice_3366266 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

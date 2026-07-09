@@ -125,27 +125,36 @@ namespace NewPOS.Sell
             FormatDGVBasket();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private bool CheckBasketAfterPrintSave()
         {
-            if(_Basket.Count == 0)
+            if (_Basket.Count == 0)
             {
                 MessageBox.Show("There is now prouct in the basket",
                     "Empty basket", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                return;
-            }    
+                return false;
+            }
 
             List<string> lessQtyProduct = _InvoiceBL.GetInsufficientStockProducts(_Basket);
 
-            if(lessQtyProduct.Any())
+            if (lessQtyProduct.Any())
             {
                 MessageBox.Show($"Stock has less Qty then " +
                     $"basket in the next product : {string.Join(" , ", lessQtyProduct)}.",
                     "Availability Issue", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                return;
+                return false;
             }
-            
+
+            return true;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (!CheckBasketAfterPrintSave())
+                return;
+
+
             if(_InvoiceBL.SaveInvoice(_Basket ,ref _Invoice))
             {
                 MessageBox.Show($"Invoice Save With ID: {_Invoice.InvoiceID}.", "Saved",
@@ -155,7 +164,6 @@ namespace NewPOS.Sell
 
                 _Basket.Clear();
             }
-
         }
 
         private void btnDeleteRow_Click(object sender, EventArgs e)
@@ -186,6 +194,22 @@ namespace NewPOS.Sell
         private void dgvBasket_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             _UpdateTotalPrice();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!CheckBasketAfterPrintSave())
+                return;
+
+            if (_InvoiceBL.SaveInvoice(_Basket, ref _Invoice))
+            {
+               
+                //we put print logic there
+
+                //ucListFindProduct1.Reload();
+
+                _Basket.Clear();
+            }
         }
     }
 }

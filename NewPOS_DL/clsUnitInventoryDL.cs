@@ -136,7 +136,9 @@ namespace NewPOS_DL
                             {
                                  UnitID = (int)reader["UnitID"],
                                  ProductID = (int)reader["ProductID"],
-                                 Product = new clsProduct((int)reader["ProductID"], (string)reader["Product Name"]),
+
+                                 // We Solve it later
+                                 //Product = new clsProduct((int)reader["ProductID"], (string)reader["Product Name"]),
                                  UnitPrice = Convert.ToDouble( reader["Unit Price"]),
                                  Quantity = (short)reader["Quantity"]
                             });

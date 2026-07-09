@@ -91,5 +91,18 @@ namespace NewPOSBL
 
             return false;
         }
+
+        public DataTable GetAllInvoices()
+        {
+            return _InvoiceDL.GetAllInvoices();
+        }
+
+        public DataTable GetInvoiceitemsByInvoiceID(int InvoiceID)
+        {
+            if(!CheckInvoiceExists(InvoiceID))
+                return null;
+
+            return _InvoiceDL.GetInvoiceitemsByInvoiceID(InvoiceID);
+        }
     }
 }

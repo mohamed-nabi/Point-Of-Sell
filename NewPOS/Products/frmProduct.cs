@@ -30,7 +30,9 @@ namespace NewPOS.Products
             dgv.Columns["ProductID"].Width = 150;
 
        //     dgv.Columns["ProductName"].HeaderText = "Product Name";
-            dgv.Columns["Product Name"].Width = 300;
+            dgv.Columns["Product Name"].Width = 160;
+
+            dgv.Columns["Barcode"].Width = 160;
 
         }
 
@@ -40,7 +42,7 @@ namespace NewPOS.Products
 
             //Simulating the retrieval of large of data from a database
 
-             await Task.Delay(4000);
+           //  await Task.Delay(4000);
 
             dgvListProducts.DataSource = _dt;
             _Editdgv(dgvListProducts);

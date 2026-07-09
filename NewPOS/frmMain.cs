@@ -1,4 +1,5 @@
 ﻿using NewPOS.Inventory;
+using NewPOS.Invoices;
 using NewPOS.Products;
 using NewPOS.Sell;
 using System;
@@ -50,6 +51,12 @@ namespace NewPOS
         private void btnSell_Click(object sender, EventArgs e)
         {
             frmSell frm = new frmSell();
+            frm.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmInvoices frm = new frmInvoices();    
             frm.ShowDialog();
         }
     }
