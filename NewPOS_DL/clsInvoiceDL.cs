@@ -207,5 +207,87 @@ namespace NewPOS_DL
 
             return dt;
         }
+
+
+        public clsInvoice GetInvoiceByID(int InvoiceID)
+        {
+            if (InvoiceID < 0)
+            {
+                return null;
+            }
+
+           
+
+            clsInvoice invoice = new clsInvoice();
+
+            string query = @"select * from Invoices
+		            where InvoiceID = @invoiceID";
+
+            using (SqlConnection connection = new SqlConnection(
+                ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                   
+                    command.Parameters.AddWithValue("@invoiceID", InvoiceID);
+
+                    connection.Open();
+
+                    using(SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if(reader.Read())
+                        {
+                            invoice.InvoiceID = InvoiceID;
+                            invoice.CreatedDateTime = (DateTime)reader["CreatedDateTime"];
+                            invoice.TotalPrice = (decimal)reader["TotalPrice"];
+                            invoice.Mode = clsInvoice.enMode.Edit;
+                        }
+                    }
+
+                  
+                }
+            }
+
+            return invoice;
+        }
+
+        public List<clsInvoiceModelItem> GetInvoiceModelItems(int InvoiceID)
+        {
+            List<clsInvoiceModelItem> list = new List<clsInvoiceModelItem>();
+
+                        string query = @"select p.ProductName ,pin.Quantity ,pin.SellUnitPrice as Price from ProductsInInvoice pin
+            inner join Inventory i on pin.UnitID = i.InventoryUnitID
+            inner join Products p on i.ProductID = p.ProductID
+            where 
+	            pin.InvoiceID = @invoiceID";
+
+            using (SqlConnection connection = new SqlConnection(
+                ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+
+                    command.Parameters.AddWithValue("@invoiceID", InvoiceID);
+
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(
+                                new clsInvoiceModelItem
+                                {
+                                    Name = (string)reader["ProductName"],
+                                    Price = (decimal)reader["Price"],
+                                    Quantity = (short)reader["Quantity"],
+                                });
+                        }
+                    }
+                }
+            }
+
+            return list;
+        }
     }
 }

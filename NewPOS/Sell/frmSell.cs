@@ -203,12 +203,24 @@ namespace NewPOS.Sell
 
             if (_InvoiceBL.SaveInvoice(_Basket, ref _Invoice))
             {
-               
+
                 //we put print logic there
+                clsUtil Util = new clsUtil();
 
-                //ucListFindProduct1.Reload();
+               
 
-                _Basket.Clear();
+                if (_InvoiceBL.SaveInvoice(_Basket, ref _Invoice))
+                {
+                    if(Util.PrintPdfFile(Util.GeneratePDFInvoice(_Invoice.InvoiceID)))
+                    {
+
+                        ucListFindProduct1.Reload();
+                        _Basket.Clear();
+                    }
+
+                }
+
+
             }
         }
     }

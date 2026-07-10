@@ -97,12 +97,40 @@ namespace NewPOSBL
             return _InvoiceDL.GetAllInvoices();
         }
 
+
         public DataTable GetInvoiceitemsByInvoiceID(int InvoiceID)
         {
             if(!CheckInvoiceExists(InvoiceID))
                 return null;
 
             return _InvoiceDL.GetInvoiceitemsByInvoiceID(InvoiceID);
+        }
+
+        public clsInvoice GetInvoiceByID(int InvoiceID)
+        {
+            return _InvoiceDL.GetInvoiceByID(InvoiceID);
+        }
+
+        public List<clsInvoiceModelItem> GetInvoiceModelItems(int InvoiceID)
+        {
+            return _InvoiceDL.GetInvoiceModelItems(InvoiceID);
+        }
+
+        public clsInvoiceModel GetInvoiceModel(int InvoiceID)
+        {
+            clsInvoice Invoice = _InvoiceDL.GetInvoiceByID(InvoiceID);
+
+            if (Invoice == null)
+                return null;
+
+            clsInvoiceModel model = new clsInvoiceModel();
+
+            model.InvoiceNumber = InvoiceID;
+            model.IssueDate = Invoice.CreatedDateTime;
+            model.InvoiceItems = GetInvoiceModelItems(InvoiceID);
+
+
+            return model;
         }
     }
 }

@@ -36,6 +36,7 @@
             this.btnSell = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tsmShowItems = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoicesList)).BeginInit();
             this.cmsinvoice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -121,15 +122,32 @@
             this.tsmShowItems.Image = global::NewPOS.Properties.Resources.invoice_3366266__2_;
             this.tsmShowItems.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmShowItems.Name = "tsmShowItems";
-            this.tsmShowItems.Size = new System.Drawing.Size(188, 30);
+            this.tsmShowItems.Size = new System.Drawing.Size(157, 30);
             this.tsmShowItems.Text = "Show Items";
             this.tsmShowItems.Click += new System.EventHandler(this.tsmShowItems_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.Lime;
+            this.btnPrint.Image = global::NewPOS.Properties.Resources.printer_684906;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrint.Location = new System.Drawing.Point(345, 433);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(82, 32);
+            this.btnPrint.TabIndex = 19;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // frmInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 472);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSell);
             this.Controls.Add(this.dgvInvoicesList);
@@ -155,5 +173,6 @@
         private System.Windows.Forms.Button btnSell;
         private System.Windows.Forms.ContextMenuStrip cmsinvoice;
         private System.Windows.Forms.ToolStripMenuItem tsmShowItems;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

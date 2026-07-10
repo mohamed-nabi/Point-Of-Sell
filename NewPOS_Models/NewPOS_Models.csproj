@@ -46,6 +46,7 @@
     <Compile Include="clsProduct.cs" />
     <Compile Include="clsInventoryUnit.cs" />
     <Compile Include="clsProductInInvoice.cs" />
+    <Compile Include="Print.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace NewPOS.Invoices
 {
@@ -20,7 +22,7 @@ namespace NewPOS.Invoices
         }
 
         DataTable _dtInvoices = new DataTable();
-        clsInvoiceBL _InvoicesBL = new clsInvoiceBL();
+        clsInvoiceBL InvoiceBL = new clsInvoiceBL();
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -35,7 +37,7 @@ namespace NewPOS.Invoices
 
         private void frmInvoices_Load(object sender, EventArgs e)
         {
-            _dtInvoices = _InvoicesBL.GetAllInvoices();
+            _dtInvoices = InvoiceBL.GetAllInvoices();
             dgvInvoicesList.DataSource = _dtInvoices;
         }
 
@@ -53,5 +55,23 @@ namespace NewPOS.Invoices
             frm.ShowDialog();   
             
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (dgvInvoicesList.CurrentRow == null)
+                return;
+
+            DataGridViewRow row = dgvInvoicesList.CurrentRow;
+
+            int InvoiceID = Convert.ToInt32(row.Cells["InvoiceID"].Value);
+
+            clsUtil Util = new clsUtil();
+
+
+            Util.PrintPdfFile(Util.GeneratePDFInvoice(InvoiceID));
+
+
+        }
     }
 }
+ 

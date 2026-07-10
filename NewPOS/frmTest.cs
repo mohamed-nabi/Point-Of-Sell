@@ -10,6 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using QuestPDF.Fluent;
+
 
 namespace NewPOS
 {
@@ -20,14 +23,17 @@ namespace NewPOS
             InitializeComponent();
         } 
 
-
+        clsInvoiceBL InvoiceBL = new clsInvoiceBL(); 
 
         private void frmTest_Load(object sender, EventArgs e)
         {
-            frmInvoiceItemsList frm = new frmInvoiceItemsList(46);
-            frm.ShowDialog();
+
+             QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
+
+
+            var model = InvoiceBL.GetInvoiceModel(46);
+            var document = new clsInvoiceDocument(model);
+            document.GeneratePdfAndShow();
         }
-
-
     }
 }
