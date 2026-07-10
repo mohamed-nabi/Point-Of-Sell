@@ -167,8 +167,8 @@ namespace NewPOS.Inventory
 
         private void _FillInvUnitClass(clsInventoryUnit InvUnit)
         {
-            if(!string.IsNullOrWhiteSpace(lblUnitInventoryID.Text))
-                _InventoryUnit.UnitID = Convert.ToInt32(lblUnitInventoryID.Text);
+            if (int.TryParse(lblUnitInventoryID.Text, out int InvID))
+                _InventoryUnit.UnitID = InvID;
 
 
             _InventoryUnit.ProductID = Convert.ToInt32(lblProductID.Text);

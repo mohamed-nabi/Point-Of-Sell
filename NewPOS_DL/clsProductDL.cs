@@ -27,7 +27,7 @@ namespace NewPOS_DL
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@ProductName", Product.ProductName);
-                    command.Parameters.AddWithValue("@Barcode", Product.ProductName);
+                    command.Parameters.AddWithValue("@Barcode", Product.Barcode);
 
 
                     SqlParameter outputIdParam = new SqlParameter("@ProductID", SqlDbType.Int)
@@ -190,7 +190,7 @@ namespace NewPOS_DL
                     command.ExecuteNonQuery();
 
                     ProductName = command.Parameters["@ProductName"].Value.ToString();
-                    ProductName = command.Parameters["@Barcode"].Value.ToString();
+                    Barcode = command.Parameters["@Barcode"].Value.ToString();
 
                 }
             }
